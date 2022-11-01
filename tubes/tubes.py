@@ -1,9 +1,11 @@
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController 
+from ursina.prefabs.platformer_controller_2d import PlatformerController2d
 
 app = Ursina()
 
-player = FirstPersonController()
+# player = FirstPersonController()
+player = PlatformerController2d()
 player.speed = 5
 Sky()
 
