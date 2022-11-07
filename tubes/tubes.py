@@ -1,13 +1,38 @@
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController 
-from ursina.prefabs.platformer_controller_2d import PlatformerController2d
 
 app = Ursina()
 
-# player = FirstPersonController()
-player = PlatformerController2d()
+player = FirstPersonController()
 player.speed = 5
 Sky()
+
+human1 = Entity(
+  model = 'assets/gg.obj',
+  color = color.black,
+  collider = 'box',
+  position = (15, -7.5, 15),
+  rotation = (-15, 180, 0),
+  scale= 10,
+)
+
+human2 = Entity(
+  model = 'assets/gg.obj',
+  color = color.blue,
+  collider = 'box',
+  position = (20, -7.5, 15),
+  rotation = (-15, 180, 0),
+  scale= 10,
+)
+
+human3 = Entity(
+  model = 'assets/gg.obj',
+  color = color.green,
+  collider = 'box',
+  position = (10, -7.5, 15),
+  rotation = (-15, 180, 0),
+  scale= 10,
+)
 
 arm = Entity(
   parent= camera.ui,
@@ -17,7 +42,7 @@ arm = Entity(
   rotation= (150, -10,6),
   scale = (0.2, 0.2, 1.5)
 )
-# terrain = Entity(
+# terrain = Entity( 
 #     model = 'plane',
 #     scale = 100,
 #     texture = 'grass',
@@ -60,7 +85,7 @@ for n in range(25):
       color=color.orange,
       highlight_color=color.lime,
       model='cube',
-      texture='grass',
+      texture='brick',
       origin_y=0.5,
       parent=scene
     )
