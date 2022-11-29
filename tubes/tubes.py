@@ -39,7 +39,7 @@ arm = Entity(
   model= 'cube',
   color= color.brown,
   position= (0.75, -0.6),
-  rotation= (150, -10,6),
+  rotation= (150, -20,6),
   scale = (0.2, 0.2, 1.5)
 )
 # terrain = Entity( 
@@ -81,7 +81,7 @@ boxes = []
 for n in range(25):
   for k in range(25):
     box = Button(
-      position=(k, -8, n),
+      position=(k, -20, n),
       color=color.orange,
       highlight_color=color.lime,
       model='cube',
