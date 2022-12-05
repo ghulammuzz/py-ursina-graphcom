@@ -1,3 +1,0 @@
-- suara selamat datang 
-- suara / pop up pesan
-- human.obj
