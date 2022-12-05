@@ -7,32 +7,6 @@ player = FirstPersonController()
 player.speed = 5
 Sky()
 
-human1 = Entity(
-  model = 'assets/gg.obj',
-  color = color.black,
-  collider = 'box',
-  position = (15, -7.5, 15),
-  rotation = (-15, 180, 0),
-  scale= 10,
-)
-
-human2 = Entity(
-  model = 'assets/gg.obj',
-  color = color.blue,
-  collider = 'box',
-  position = (20, -7.5, 15),
-  rotation = (-15, 180, 0),
-  scale= 10,
-)
-
-human3 = Entity(
-  model = 'assets/gg.obj',
-  color = color.green,
-  collider = 'box',
-  position = (10, -7.5, 15),
-  rotation = (-15, 180, 0),
-  scale= 10,
-)
 
 arm = Entity(
   parent= camera.ui,
@@ -42,23 +16,6 @@ arm = Entity(
   rotation= (150, -20,6),
   scale = (0.2, 0.2, 1.5)
 )
-# terrain = Entity( 
-#     model = 'plane',
-#     scale = 100,
-#     texture = 'grass',
-#     collider = 'mesh',
-#     position = (0,-10,0)
-# )
-# street = Entity(
-#   model="cube",
-#   collider="box",
-#   position=(-7, -10.2, 20),
-#   scale=(50.,1,8),
-#   rotation=(0,0,0),
-# 	texture="brick",
-#   texture_scale=(5,5),
-#   color=color.rgb(255, 128, 0)
-# )
 
 boxes = Button(
   model='cube',
@@ -78,10 +35,10 @@ def update():
     arm.position = (0.75, -0.6)
 
 boxes = []
-for n in range(25):
-  for k in range(25):
+for n in range(10):
+  for k in range(10):
     box = Button(
-      position=(k, -20, n),
+      position=(k, -10, n),
       color=color.orange,
       highlight_color=color.lime,
       model='cube',
@@ -110,11 +67,4 @@ def input(key):
         boxes.remove(box)
         destroy(box)
 
-
-# human1 = Entity(
-#     model = 'cube',
-#     scale = 1,
-#     texture = 'BG2.png',
-#     position = (5, -8, 0)
-# )
 app.run()
